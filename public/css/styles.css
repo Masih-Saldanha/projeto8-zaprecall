@@ -15,8 +15,8 @@ body {
     font-family: 'Recursive', sans-serif;
     font-weight: 400;
     font-size: 12px;
-    background-color: #FB6B6B;
     /* FUNDO GERAL */
+    background-color: #FB6B6B;
 }
 
 /* ESTILOS DA TELA INICIAL */
@@ -24,17 +24,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: calc(50vh - 97px);/* 194px = altura de startScreen */
+    /* 200px = altura de startScreen */
+    margin-top: calc(50vh - (200px / 2));
 }
 
 .startTitle {
+    margin-top: 6px;
     font-family: 'Righteous', cursive;
     font-size: 25px;
     color: #FFFFFF;
-}
-
-.startImage {
-    width: 55px;
 }
 
 .startButton {
@@ -49,7 +47,34 @@ body {
 }
 
 /* ESTILOS DA TELA DE CARDS */
+.cardScreenHeader {
+    top: 20px;
+    left: calc(50vw - (117.1px / 2));
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardScreenHeaderTitle {
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.cardScreenFooter {
+    bottom: 0px;
+    width: 100vw;
+    padding: 10px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
 .cardScreen {
+    margin-top: calc(50vh - (268px / 2));
     display: flex;
     flex-direction: column;
     align-items: center;
