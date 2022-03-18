@@ -1,7 +1,11 @@
-export default function Card() {
+export default function Card(props) {
+    const {numeroCard} = props;
     return (
-        <article className="card">
-            <img className="startImage" src="./assets/logo.png" alt="startImage" />
-        </article>
+        <section className="card">
+            <article className="frontCard">
+                <p className="frontCardTitle">Pergunta {numeroCard}</p>
+                <ion-icon name="play-outline"></ion-icon>
+            </article>
+        </section>
     )
 }
