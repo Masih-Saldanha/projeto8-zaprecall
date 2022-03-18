@@ -75,7 +75,7 @@ body {
 
 .cardScreen {
     /* position: fixed; */
-    margin-top: calc(50vh - (360px / 2));
+    /* margin-top: calc(50vh - (360px / 2)); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,10 +96,10 @@ body {
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     width: 182px;
-    height: 40px;
     padding: calc((40px / 2) - (12px / 2)) 6px;
     /*     (altura card / 2) - (altura elemento interno do card / 2) */
     margin: 2.5px;
+    position: relative;
 }
 
 .frontCard {
@@ -111,6 +111,24 @@ body {
 .frontCardTitle {
     font-weight: 700;
     color: #333333;
+}
+
+.cardQuestion {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 182px;
+    height: 80px;
+    padding: calc((40px / 2) - (12px / 2)) 6px;
+    /*     (altura card / 2) - (altura elemento interno do card / 2) */
+    margin: 2.5px;
+    position: relative;
+}
+
+.setinha {
+    position: absolute;
+    right: 8px;
+    bottom: 7px;
 }
 
 /* ESCONDIDO */
