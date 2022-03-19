@@ -1,6 +1,8 @@
 import react from "react";
-import StartScreen from "./StartScreen";
-import CardScreen from "./CardScreen";
+import StartScreen from "../StartScreen/StartScreen";
+import CardScreen from "../CardScreen/CardScreen";
+import "./reset.css"
+import "./styles.css"
 
 export default function App() {
     const [hiddenStartScreen, setHiddenStartScreen] = react.useState("")

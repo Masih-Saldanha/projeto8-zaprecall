@@ -1,7 +1,8 @@
 import react from "react";
-import CardScreenHeader from "./CardScreenHeader";
-import DisplayCards from "./DisplayCards";
-import CardScreenFooter from "./CardScreenFooter";
+import CardScreenHeader from "../CardScreenHeader/CardScreenHeader";
+import DisplayCards from "../DisplayCards/DisplayCards";
+import CardScreenFooter from "../CardScreenFooter/CardScreenFooter";
+import "../CardScreen/CardScreen.css"
 
 export default function CardScreen(props) {
     const { hidden } = props;

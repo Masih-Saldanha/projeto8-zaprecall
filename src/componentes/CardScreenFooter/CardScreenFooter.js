@@ -1,3 +1,5 @@
+import "../CardScreenFooter/CardScreenFooter.css"
+
 export default function CardScreenFooter(props) {
     const {cardScore, cardTotalScore} = props
     return (

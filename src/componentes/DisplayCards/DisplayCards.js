@@ -1,4 +1,6 @@
-import Card from "./Card";
+import "../DisplayCards/DisplayCards.css"
+
+import Card from "../Card/Card";
 
 export default function DisplayCards(props) {
     const { setCardTotalScore, setCardScore } = props

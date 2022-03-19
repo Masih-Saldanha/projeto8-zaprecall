@@ -1,0 +1,27 @@
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 300px;
+    padding: 23px 15px;
+    margin: calc(25px / 2);
+    position: relative;
+}
+
+.frontCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frontCardTitle {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+}
+
+.setinha {
+    position: absolute;
+    right: 15px;
+    bottom: 6px;
+}

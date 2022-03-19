@@ -1,3 +1,6 @@
+import "../Card/Card.css"
+import Setinha from "../../assets/setinha.png"
+
 export default function Card(props) {
     const {numeroCard, question} = props;
     // return (
@@ -9,9 +12,9 @@ export default function Card(props) {
     //     </section>
     // )
     return (
-        <section className="cardQuestion">
+        <section className="card">
                 <p className="question">{question}</p>
-                <img className="setinha" src="./assets/setinha.png" alt="setinha" />
+                <img className="setinha" src={Setinha} alt="setinha" />
         </section>
     )
 }
