@@ -12,7 +12,7 @@ export default function Card(props) {
     //     </section>
     // )
     return (
-        <section className="card">
+        <section className="cardQuestion">
                 <p className="question">{question}</p>
                 <img className="setinha" src={Setinha} alt="setinha" />
         </section>

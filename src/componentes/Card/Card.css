@@ -20,8 +20,23 @@
     color: #333333;
 }
 
+.card ion-icon {
+    font-size: 20px;
+}
+
+.cardQuestion {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 300px;
+    padding: 23px 15px 108px 15px;
+    margin: calc(25px / 2);
+    position: relative;
+}
+
 .setinha {
     position: absolute;
+    width: 30px;
     right: 15px;
     bottom: 6px;
 }
