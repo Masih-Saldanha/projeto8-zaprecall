@@ -1,9 +1,8 @@
 import "../DisplayCards/DisplayCards.css"
-
 import Card from "../Card/Card";
 
 export default function DisplayCards(props) {
-    const { setCardTotalScore, setCardScore } = props
+    const { setCardTotalScore, setCardScore, cardScore, listaRespondidas, setListaRespondidas, setErrou } = props
     const cards = [
         {
             question: "O que é JSX?",
@@ -39,6 +38,10 @@ export default function DisplayCards(props) {
         }
     ]
     setCardTotalScore(cards.length)
+    function comparador() {
+        return Math.random() - 0.5;
+    }
+    cards.sort(comparador)
     return (
         <menu className="cardScreenMenu">
             {
@@ -50,6 +53,11 @@ export default function DisplayCards(props) {
                                 numeroCard={indice + 1}
                                 question={card.question}
                                 answer={card.answer}
+                                setCardScore={setCardScore}
+                                cardScore={cardScore}
+                                listaRespondidas={listaRespondidas}
+                                setListaRespondidas={setListaRespondidas}
+                                setErrou={setErrou}
                             />
                         )
                     }

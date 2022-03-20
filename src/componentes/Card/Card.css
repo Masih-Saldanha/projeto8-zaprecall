@@ -24,6 +24,57 @@
     font-size: 20px;
 }
 
+.frontCardred {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frontCardred ion-icon {
+    color: #FF3030;
+}
+
+.frontCardyellow ion-icon {
+    color: #FF922E;
+}
+
+.frontCardgreen ion-icon {
+    color: #2FBE34;
+}
+
+.frontCardyellow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frontCardgreen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frontCardTitlered {
+    font-weight: 700;
+    font-size: 16px;
+    color: #FF3030;
+    text-decoration-line: line-through;
+}
+
+.frontCardTitleyellow {
+    font-weight: 700;
+    font-size: 16px;
+    color: #FF922E;
+    text-decoration-line: line-through;
+}
+
+.frontCardTitlegreen {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2FBE34;
+    text-decoration-line: line-through;
+}
+
 .cardQuestion {
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
