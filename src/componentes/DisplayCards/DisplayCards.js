@@ -2,7 +2,7 @@ import "../DisplayCards/DisplayCards.css"
 import Card from "../Card/Card";
 
 export default function DisplayCards(props) {
-    const { setCardTotalScore, setCardScore, cardScore, listaRespondidas, setListaRespondidas, setErrou } = props
+    const { setCardTotalScore, setCardScore, cardTotalScore, cardScore, listaRespondidas, setListaRespondidas, acertou, setAcertou, restart, setRestart } = props
     const cards = [
         {
             question: "O que é JSX?",
@@ -53,11 +53,15 @@ export default function DisplayCards(props) {
                                 numeroCard={indice + 1}
                                 question={card.question}
                                 answer={card.answer}
+                                cardTotalScore={cardTotalScore}
                                 setCardScore={setCardScore}
                                 cardScore={cardScore}
                                 listaRespondidas={listaRespondidas}
                                 setListaRespondidas={setListaRespondidas}
-                                setErrou={setErrou}
+                                acertou={acertou}
+                                setAcertou={setAcertou}
+                                restart={restart}
+                                setRestart={setRestart}
                             />
                         )
                     }

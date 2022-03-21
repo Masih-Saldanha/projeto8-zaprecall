@@ -3,7 +3,7 @@ import Party from "../../assets/party.png"
 import Sad from "../../assets/sad.png"
 
 export default function CardScreenFooter(props) {
-    const { cardScore, cardTotalScore, listaRespondidas, errou } = props
+    const { cardScore, setCardScore, cardTotalScore, listaRespondidas, acertou, setAcertou, setHiddenStartScreen, setHiddenCardScreen, setRestart, aimedScore } = props
     if (cardScore < cardTotalScore) {
         return (
             <footer className="cardScreenFooter" >
@@ -17,7 +17,7 @@ export default function CardScreenFooter(props) {
                 </menu>
             </footer>
         )
-    } else if (cardScore === cardTotalScore && errou === false) {
+    } else if (cardScore === cardTotalScore && acertou >= aimedScore) {
         return (
             <footer className="cardScreenFooter" >
                 <article className="endContainer">
@@ -33,9 +33,16 @@ export default function CardScreenFooter(props) {
                         )
                     })}
                 </menu>
+                {/* <button className="restart" onClick={() => {
+                    setHiddenStartScreen("");
+                    setHiddenCardScreen(" hidden");
+                    setCardScore(0);
+                    setAcertou(0);
+                    setRestart(true);
+                }}>REINICIAR RECALL</button> */}
             </footer>
         )
-    } else if (cardScore === cardTotalScore && errou === true) {
+    } else if (cardScore === cardTotalScore && acertou < aimedScore) {
         return (
             <footer className="cardScreenFooter" >
                 <article className="endContainer">
@@ -52,6 +59,13 @@ export default function CardScreenFooter(props) {
                         )
                     })}
                 </menu>
+                {/* <button className="restart" onClick={() => {
+                    setHiddenStartScreen("");
+                    setHiddenCardScreen(" hidden");
+                    setCardScore(0);
+                    setAcertou(0);
+                    setRestart(true);
+                }}>REINICIAR RECALL</button> */}
             </footer>
         )
     }

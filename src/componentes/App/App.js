@@ -5,8 +5,10 @@ import "./reset.css"
 import "./styles.css"
 
 export default function App() {
-    const [hiddenStartScreen, setHiddenStartScreen] = react.useState("")
-    const [hiddenCardScreen, setHiddenCardScreen] = react.useState(" hidden")
+    const [hiddenStartScreen, setHiddenStartScreen] = react.useState("");
+    const [hiddenCardScreen, setHiddenCardScreen] = react.useState(" hidden");
+    const [restart, setRestart] = react.useState(false);
+    const [aimedScore, setAimedScore] = react.useState(0);
 
     return (
         <>
@@ -14,8 +16,17 @@ export default function App() {
                 hidden={hiddenStartScreen}
                 function1={setHiddenStartScreen}
                 function2={setHiddenCardScreen}
+                setRestart={setRestart}
+                setAimedScore={setAimedScore}
             />
-            <CardScreen hidden={hiddenCardScreen} />
+            <CardScreen
+            hidden={hiddenCardScreen} 
+            setHiddenStartScreen={setHiddenStartScreen}
+            setHiddenCardScreen={setHiddenCardScreen}
+            restart={restart}
+            setRestart={setRestart}
+            aimedScore={aimedScore}
+            />
         </>
     )
 }

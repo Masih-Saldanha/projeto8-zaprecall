@@ -12,6 +12,7 @@
 }
 
 .listOfAnswered {
+    margin-top: 6px;
     font-size: 23px;
 }
 
@@ -45,4 +46,15 @@
     text-align: center;
     width: 222px;
     margin: 14px 0;
+}
+
+.restart {
+    width: 167px;
+    height: 32px;
+    background: #FB6B6B;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 23px;
 }

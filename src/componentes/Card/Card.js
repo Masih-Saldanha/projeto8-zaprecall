@@ -3,10 +3,19 @@ import Setinha from "../../assets/setinha.png"
 import react from "react";
 
 export default function Card(props) {
-    const { numeroCard, question, answer, setCardScore, cardScore, listaRespondidas, setListaRespondidas, setErrou } = props;
+    const { numeroCard, question, answer, cardTotalScore, setCardScore, cardScore, listaRespondidas, setListaRespondidas, acertou, setAcertou, restart, setRestart } = props;
     const [perguntaRevelada, setPerguntaRevelada] = react.useState(false);
     const [respostaRevelada, setRespostaRevelada] = react.useState(false);
     const [cor, setCor] = react.useState("");
+    // if (restart === true && cor !== "") {
+    // setPerguntaRevelada(false);
+    // setRespostaRevelada(false);
+    // setCor("");
+    // setListaRespondidas([]);
+    // setCardScore(0);
+    // setAcertou(0);
+    // setRestart(false);
+    // }
     if (perguntaRevelada === false && respostaRevelada === false) {
         return (
             <section className="card">
@@ -29,19 +38,20 @@ export default function Card(props) {
                 <p className="question">{answer}</p>
                 <menu className="buttonsMenu">
                     <button className="redButton" onClick={() => {
-                        setErrou(true);
                         setCardScore(cardScore + 1);
                         setListaRespondidas([...listaRespondidas, <ion-icon class="red" name="close-circle"></ion-icon>]);
                         setCor("red");
                         setPerguntaRevelada(false);
                     }} >Não lembrei</button>
                     <button className="yellowButton" onClick={() => {
+                        setAcertou(acertou + 1);
                         setCardScore(cardScore + 1);
                         setListaRespondidas([...listaRespondidas, <ion-icon class="yellow" name="help-circle"></ion-icon>]);
                         setCor("yellow");
                         setPerguntaRevelada(false);
                     }}>Quase não lembrei</button>
                     <button className="greenButton" onClick={() => {
+                        setAcertou(acertou + 1);
                         setCardScore(cardScore + 1);
                         setListaRespondidas([...listaRespondidas, <ion-icon class="green" name="checkmark-circle"></ion-icon>]);
                         setCor("green");
