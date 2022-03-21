@@ -6,7 +6,7 @@ import "../CardScreen/CardScreen.css"
 
 export default function CardScreen(props) {
     const { hidden } = props;
-    const [cardTotalScore, setCardTotalScore] = react.useState(0);
+    const [cardTotalScore, setCardTotalScore] = react.useState(8);
     const [cardScore, setCardScore] = react.useState(0);
     const [listaRespondidas, setListaRespondidas] = react.useState([]);
     const [errou, setErrou] = react.useState(false)
