@@ -1,5 +1,5 @@
-import "../StartScreen/StartScreen.css"
-import Logo from "../../assets/logo.png"
+import "../StartScreen/StartScreen.css";
+import Logo from "../../assets/logo.png";
 
 export default function StartScreen(props) {
     const { hidden, function1, function2, setRestart, setAimedScore, setDeckChoosen } = props;
@@ -27,7 +27,7 @@ export default function StartScreen(props) {
                 setAimedScore(Number(scoreDesejado));
                 function1(" hidden");
                 function2("");
-                // setRestart(true);
+                setRestart(true);
             }} >Iniciar Recall!</button>
         </main>
     )

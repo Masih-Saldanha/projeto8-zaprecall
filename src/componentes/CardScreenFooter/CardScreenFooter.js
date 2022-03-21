@@ -1,9 +1,9 @@
-import "../CardScreenFooter/CardScreenFooter.css"
-import Party from "../../assets/party.png"
-import Sad from "../../assets/sad.png"
+import "../CardScreenFooter/CardScreenFooter.css";
+import Party from "../../assets/party.png";
+import Sad from "../../assets/sad.png";
 
 export default function CardScreenFooter(props) {
-    const { cardScore, setCardScore, cardTotalScore, listaRespondidas, acertou, setAcertou, setHiddenStartScreen, setHiddenCardScreen, setRestart, aimedScore } = props
+    const { cardScore, setCardScore, cardTotalScore, listaRespondidas, acertou, setAcertou, setHiddenStartScreen, setHiddenCardScreen, aimedScore } = props
     if (cardScore < cardTotalScore) {
         return (
             <footer className="cardScreenFooter" >
@@ -33,13 +33,12 @@ export default function CardScreenFooter(props) {
                         )
                     })}
                 </menu>
-                {/* <button className="restart" onClick={() => {
+                <button className="restart" onClick={() => {
                     setHiddenStartScreen("");
                     setHiddenCardScreen(" hidden");
                     setCardScore(0);
                     setAcertou(0);
-                    setRestart(true);
-                }}>REINICIAR RECALL</button> */}
+                }}>REINICIAR RECALL</button>
             </footer>
         )
     } else if (cardScore === cardTotalScore && acertou < aimedScore) {
@@ -59,13 +58,12 @@ export default function CardScreenFooter(props) {
                         )
                     })}
                 </menu>
-                {/* <button className="restart" onClick={() => {
+                <button className="restart" onClick={() => {
                     setHiddenStartScreen("");
                     setHiddenCardScreen(" hidden");
                     setCardScore(0);
                     setAcertou(0);
-                    setRestart(true);
-                }}>REINICIAR RECALL</button> */}
+                }}>REINICIAR RECALL</button>
             </footer>
         )
     }

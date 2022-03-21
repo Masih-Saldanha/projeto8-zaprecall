@@ -1,5 +1,5 @@
-import "../CardScreenHeader/CardScreenHeader.css"
-import LogoPequeno from "../../assets/logo-pequeno.png"
+import "../CardScreenHeader/CardScreenHeader.css";
+import LogoPequeno from "../../assets/logo-pequeno.png";
 
 export default function CardScreenHeader() {
     return (

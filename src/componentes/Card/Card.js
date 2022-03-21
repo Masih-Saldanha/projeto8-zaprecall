@@ -1,21 +1,19 @@
-import "../Card/Card.css"
-import Setinha from "../../assets/setinha.png"
 import react from "react";
+import "../Card/Card.css";
+import Setinha from "../../assets/setinha.png";
 
 export default function Card(props) {
     const { numeroCard, question, answer, cardTotalScore, setCardScore, cardScore, listaRespondidas, setListaRespondidas, acertou, setAcertou, restart, setRestart } = props;
     const [perguntaRevelada, setPerguntaRevelada] = react.useState(false);
     const [respostaRevelada, setRespostaRevelada] = react.useState(false);
     const [cor, setCor] = react.useState("");
-    // if (restart === true && cor !== "") {
-    // setPerguntaRevelada(false);
-    // setRespostaRevelada(false);
-    // setCor("");
-    // setListaRespondidas([]);
-    // setCardScore(0);
-    // setAcertou(0);
-    // setRestart(false);
-    // }
+    if (restart === true && cardScore === cardTotalScore && cor !== "") {
+        setPerguntaRevelada(false);
+        setRespostaRevelada(false);
+        setCor("");
+        setListaRespondidas([]);
+        setRestart(false);
+    }
     if (perguntaRevelada === false && respostaRevelada === false) {
         return (
             <section className="card">

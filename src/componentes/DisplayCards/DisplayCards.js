@@ -1,8 +1,10 @@
-import "../DisplayCards/DisplayCards.css"
+// import react from "react";
 import Card from "../Card/Card";
+import "../DisplayCards/DisplayCards.css";
 
 export default function DisplayCards(props) {
     const { setCardTotalScore, setCardScore, cardTotalScore, cardScore, listaRespondidas, setListaRespondidas, acertou, setAcertou, restart, setRestart, deckChoosen } = props;
+    // const [naoEmbaralhado, setNaoEmbaralhado] = react.useState(false);
     let cards = [];
     if (deckChoosen === 1) {
         cards = [
@@ -75,11 +77,15 @@ export default function DisplayCards(props) {
             }
         ]
     }
-    setCardTotalScore(cards.length)
+    setCardTotalScore(cards.length);
     function comparador() {
         return Math.random() - 0.5;
     }
-    cards.sort(comparador)
+    // if (naoEmbaralhado === false) {
+    cards.sort(comparador);
+    console.log(cards);
+    // }
+    // setNaoEmbaralhado(true);
     return (
         <menu className="cardScreenMenu">
             {
@@ -100,6 +106,7 @@ export default function DisplayCards(props) {
                                 setAcertou={setAcertou}
                                 restart={restart}
                                 setRestart={setRestart}
+                            // setNaoEmbaralhado={setNaoEmbaralhado}
                             />
                         )
                     }
