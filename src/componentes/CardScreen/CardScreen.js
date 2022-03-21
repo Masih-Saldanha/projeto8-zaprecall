@@ -5,7 +5,7 @@ import CardScreenFooter from "../CardScreenFooter/CardScreenFooter";
 import "../CardScreen/CardScreen.css"
 
 export default function CardScreen(props) {
-    const { hidden, setHiddenStartScreen, setHiddenCardScreen, restart, setRestart, aimedScore } = props;
+    const { hidden, setHiddenStartScreen, setHiddenCardScreen, restart, setRestart, aimedScore, deckChoosen } = props;
     const [cardTotalScore, setCardTotalScore] = react.useState(8);
     const [cardScore, setCardScore] = react.useState(0);
     const [listaRespondidas, setListaRespondidas] = react.useState([]);
@@ -26,6 +26,7 @@ export default function CardScreen(props) {
                 setAcertou={setAcertou}
                 restart={restart}
                 setRestart={setRestart}
+                deckChoosen={deckChoosen}
             />
 
             <CardScreenFooter

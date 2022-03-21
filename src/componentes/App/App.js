@@ -9,6 +9,7 @@ export default function App() {
     const [hiddenCardScreen, setHiddenCardScreen] = react.useState(" hidden");
     const [restart, setRestart] = react.useState(false);
     const [aimedScore, setAimedScore] = react.useState(0);
+    const [deckChoosen, setDeckChoosen] = react.useState(1);
 
     return (
         <>
@@ -18,14 +19,16 @@ export default function App() {
                 function2={setHiddenCardScreen}
                 setRestart={setRestart}
                 setAimedScore={setAimedScore}
+                setDeckChoosen={setDeckChoosen}
             />
             <CardScreen
-            hidden={hiddenCardScreen} 
-            setHiddenStartScreen={setHiddenStartScreen}
-            setHiddenCardScreen={setHiddenCardScreen}
-            restart={restart}
-            setRestart={setRestart}
-            aimedScore={aimedScore}
+                hidden={hiddenCardScreen}
+                setHiddenStartScreen={setHiddenStartScreen}
+                setHiddenCardScreen={setHiddenCardScreen}
+                restart={restart}
+                setRestart={setRestart}
+                aimedScore={aimedScore}
+                deckChoosen={deckChoosen}
             />
         </>
     )
